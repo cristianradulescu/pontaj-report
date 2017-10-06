@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "ln -s $(PWD)/node_modules/emag-apps-ui-kit/dist public/ui-kit"
+    "postinstall": "ln -s $(pwd)/node_modules/emag-apps-ui-kit/dist public/ui-kit"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
