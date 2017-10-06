@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ title }}</title>
+        <meta name="description" content="pontaj">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="cr">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon.ico">
+
+        <!-- The main stylesheet contains all the essential Bootstrap & eMAG Apps UI KIT styling -->
+        <link rel="stylesheet" href="/ui-kit/css/main_style.min.css">
+        {% block stylesheet %}{% endblock %}
+        
+    </head>
+    <body>
+        <!-- HEADER:Start -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="nav-controls visible-xs-inline-block pull-left">
+                        <button class="btn btn-default navbar-btn" id="toggle-sidebar-btn" type="button"><span class="sr-only">Toggle sidepanel</span><i class="fa fa-bars"></i></button>
+                    </div>
+                    <a class="navbar-brand" href="/">
+                        <i class="fa fa-wrench" aria-hidden="true"></i>
+                    </a>
+                    <div class="nav-controls visible-xs-inline-block pull-right">
+                        <button class="btn btn-default navbar-btn" data-target="#test1_navbar" data-toggle="collapse" id="main-min-nav" type="button">
+                            <span class="sr-only">Toggle navigation</span><i class="fa fa-angle-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="test2_navbar">
+                    <h4 class="navbar-text">{{ title }}</h4>
+                </div>
+            </div>
+        </nav>
+        <!-- HEADER:End -->
+
+        <!-- PAGE:Start -->
+        
+            <div class="main-container" id="main-container">
+                <div class="main-container-inner">
+                
+                <!-- SIDEBAR:Start -->
+                <!-- SIDEBAR:End -->
+
+                <!-- CONTENT:Start -->
+                <div class="main-content">
+                    <div class="page-content">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+                <!-- CONTENT:End -->
+
+                <!-- FOOTER:Start -->
+                <!-- FOOTER:End -->
+                 
+                </div>
+            </div>
+        
+        <!-- PAGE:End -->
+
+        <!-- POPUPS:Start -->
+        <div id="pop_space"></div>
+        <!-- POPUPS:End -->
+
+        <!-- SCRIPTS:Start -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write("<script src=\"../ui-kit/js/lib/jquery-1.11.3.min.js\">"+"<"+"/script>")</script>
+
+        <!-- The main script file contains all the essential Bootstrap & eMAG Apps UI KIT utilities -->
+        <script src="/ui-kit/js/main_script.min.js"></script>
+        {% block scripts %}{% endblock %}
+        <!-- SCRIPTS:End -->
+
+        <!-- DOCUMENT-READY:Start -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log('Ready, Captain!');
+            });
+        </script>
+        <!-- DOCUMENT-READY:End -->
+    </body>
+</html>
